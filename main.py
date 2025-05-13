@@ -1,6 +1,3 @@
-# this allows us to use code from
-# the open-source pygame library
-# throughout this file
 import pygame
 from constants import *
 from player import *
@@ -25,6 +22,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
         screen.fill((0, 0, 0))
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip()
         dt = clock.tick(FPS) / 1000
